@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestChatApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fiY-9t-fEE">
+                                <rect key="frame" x="0.0" y="20" width="320" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimpleCell" rowHeight="39" id="MYl-1m-sIz">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="39"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MYl-1m-sIz" id="gMU-8a-2Re">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="PMl-Nh-o6Z"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="89G-Bm-Qwj"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMq-Mf-4yw">
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xB0-0U-NIQ">
+                                        <rect key="frame" x="269" y="5" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="1n4-sZ-gKv"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="btnSendClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fjn-6e-yUP"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ban-Jf-ktR">
+                                        <rect key="frame" x="5" y="5" width="259" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9767052531" green="0.60546392199999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xB0-0U-NIQ" firstAttribute="top" secondItem="UMq-Mf-4yw" secondAttribute="top" constant="5" id="64S-q4-p10"/>
+                                    <constraint firstAttribute="bottom" secondItem="xB0-0U-NIQ" secondAttribute="bottom" constant="5" id="HSE-JF-Bps"/>
+                                    <constraint firstAttribute="trailing" secondItem="xB0-0U-NIQ" secondAttribute="trailing" constant="5" id="Kfs-hJ-Wkg"/>
+                                    <constraint firstItem="xB0-0U-NIQ" firstAttribute="leading" secondItem="ban-Jf-ktR" secondAttribute="trailing" constant="5" id="c9E-zm-wpN"/>
+                                    <constraint firstItem="ban-Jf-ktR" firstAttribute="leading" secondItem="UMq-Mf-4yw" secondAttribute="leading" constant="5" id="jWG-LC-B7c"/>
+                                    <constraint firstAttribute="height" constant="40" id="lOy-xH-hwQ"/>
+                                    <constraint firstItem="ban-Jf-ktR" firstAttribute="top" secondItem="UMq-Mf-4yw" secondAttribute="top" constant="5" id="mFy-k1-Jcz"/>
+                                    <constraint firstAttribute="bottom" secondItem="ban-Jf-ktR" secondAttribute="bottom" constant="5" id="oaj-PY-dx1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UMq-Mf-4yw" secondAttribute="trailing" id="PUv-VK-MMv"/>
+                            <constraint firstItem="UMq-Mf-4yw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R9v-Js-r2Z"/>
+                            <constraint firstAttribute="trailing" secondItem="fiY-9t-fEE" secondAttribute="trailing" id="Vgy-ck-oz7"/>
+                            <constraint firstItem="fiY-9t-fEE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iX3-KX-Or9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UMq-Mf-4yw" secondAttribute="bottom" id="jYH-Jk-uRV"/>
+                            <constraint firstItem="fiY-9t-fEE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lQI-4Y-Trx"/>
+                            <constraint firstItem="UMq-Mf-4yw" firstAttribute="top" secondItem="fiY-9t-fEE" secondAttribute="bottom" id="xcH-fU-mI6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="kbHeight" destination="jYH-Jk-uRV" id="Sob-bw-WpD"/>
+                        <outlet property="tableView" destination="fiY-9t-fEE" id="nbC-D4-4Iz"/>
+                        <outlet property="tfMessage" destination="ban-Jf-ktR" id="9Bo-2C-eDT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="413"/>
+        </scene>
+    </scenes>
+</document>
